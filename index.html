@@ -8,8 +8,10 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
         header { background: #333; color: white; padding: 10px 0; text-align: center; }
         nav a { color: white; margin: 0 15px; text-decoration: none; }
-        .hero { background: #eee; padding: 100px 0; text-align: center; }
+        .hero { background: url('https://example.com/path/to/barcelona.jpg') no-repeat center center; background-size: cover; padding: 100px 20px; text-align: center; color: white; }
         .section { padding: 50px 20px; }
+        .section:nth-child(odd) { background-color: white; }
+        .section:nth-child(even) { background-color: #f0f0f0; }
         .cta-form { max-width: 600px; margin: 0 auto; }
         .cta-form input, .cta-form textarea { width: 100%; padding: 10px; margin: 5px 0; }
         .cta-form button { background: #333; color: white; padding: 10px 20px; border: none; cursor: pointer; }

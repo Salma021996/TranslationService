@@ -214,15 +214,15 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: relative;
         }
-        .testimonial:nth-child(odd) {
-            transform: translateY(-20px); /* Move the first testimonial slightly up */
+        .testimonial:first-child {
+            align-self: flex-start; /* Align the first testimonial to the start */
         }
-        .testimonial:nth-child(even) {
-            transform: translateY(20px); /* Move the second testimonial slightly down */
+        .testimonial:last-child {
+            align-self: flex-end; /* Align the last testimonial to the end */
         }
         .logo {
             margin: 20px;
-            max-width: 100px;
+            max-width: 150px;
         }
         footer { background: #333; color: white; text-align: center; padding: 10px 0; }
     </style>
@@ -300,7 +300,7 @@
     <h2>They trusted us</h2>
     <div class="logos">
         <div class="logo">
-            <img src="images/logo.png" alt="Trusted Logo">
+            <img src="images/hempel_logo.png" alt="Hempel A/S Logo">
         </div>
         <!-- Add more logos as needed -->
     </div>

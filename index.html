@@ -6,9 +6,57 @@
     <title>Translation Services</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: white; padding: 10px 0; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        .hero { position: relative; background: url('https://raw.githubusercontent.com/Salma021996/TranslationService/main/images/image.webp') no-repeat center center; background-size: cover; padding: 150px 20px; text-align: center; color: white; }
+        header { 
+            position: absolute; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            padding: 10px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            z-index: 3; 
+        }
+        .header-left {
+            margin-left: 20px;
+        }
+        .header-left h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header-left p {
+            margin: 0;
+            font-size: 12px;
+        }
+        .header-middle nav {
+            display: flex;
+        }
+        .header-middle nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+        }
+        .header-right a {
+            color: white;
+            margin-right: 20px;
+            padding: 10px 20px;
+            background: #f39c12;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .header-right a:hover {
+            background: #e67e22;
+        }
+        .hero { 
+            position: relative; 
+            background: url('https://raw.githubusercontent.com/Salma021996/TranslationService/main/images/image.webp') no-repeat center center; 
+            background-size: cover; 
+            padding: 150px 20px; 
+            text-align: center; 
+            color: white; 
+        }
         .hero::after {
             content: "";
             position: absolute;
@@ -19,7 +67,7 @@
             background: rgba(0, 0, 0, 0.7); /* Adjust the transparency here */
             z-index: 1;
         }
-       .hero h1, .hero p, .hero a {
+        .hero h1, .hero p, .hero a {
             position: relative;
             z-index: 2;
         }
@@ -50,12 +98,21 @@
 <body>
 
 <header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#cta">Request Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#logos">Companies</a>
-    </nav>
+    <div class="header-left">
+        <h1>OTB</h1>
+        <p>OFFICIUM TRANSLATIONIS BARCELONA</p>
+    </div>
+    <div class="header-middle">
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#cta">Request Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#logos">Companies</a>
+        </nav>
+    </div>
+    <div class="header-right">
+        <a href="#cta">Request</a>
+    </div>
 </header>
 
 <section class="hero" id="hero">

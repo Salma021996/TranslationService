@@ -205,13 +205,24 @@
             justify-content: space-around;
             text-align: center;
         }
-        .testimonial, .logo {
+        .testimonial {
             flex: 0 0 45%; /* Adjust this value to fit your layout */
             margin: 20px;
             background: #fff;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .testimonial:nth-child(odd) {
+            transform: translateY(-20px); /* Move the first testimonial slightly up */
+        }
+        .testimonial:nth-child(even) {
+            transform: translateY(20px); /* Move the second testimonial slightly down */
+        }
+        .logo {
+            margin: 20px;
+            max-width: 100px;
         }
         footer { background: #333; color: white; text-align: center; padding: 10px 0; }
     </style>
@@ -282,6 +293,16 @@
         <div class="testimonial">
             <p>"Guillermo was extremely accommodating to all the changes we were making to the original work while he was already translating it into Spanish. Despite the constant updates, he managed to keep all the terminology on-point and delivered a flawless translation. His flexibility and precision were exceptional. We couldn't have asked for a better translator." - R.S.</p>
         </div>
+    </div>
+</section>
+
+<section class="section" id="trusted">
+    <h2>They trusted us</h2>
+    <div class="logos">
+        <div class="logo">
+            <img src="images/logo.png" alt="Trusted Logo">
+        </div>
+        <!-- Add more logos as needed -->
     </div>
 </section>
 

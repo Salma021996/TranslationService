@@ -152,6 +152,11 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        .cta-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
         .cta-form input, .cta-form textarea {
             width: calc(50% - 10px);
             padding: 10px;
@@ -159,10 +164,8 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            display: inline-block;
         }
-        .cta-form input[type="text"],
-        .cta-form input[type="email"] {
+        .cta-form input[type="text"] {
             width: calc(50% - 10px);
         }
         .cta-form input[type="email"],
@@ -188,7 +191,7 @@
         .form-checkbox {
             display: flex;
             align-items: center;
-            margin-top: 10px;
+            margin: 10px 0;
         }
         .form-checkbox input {
             margin-right: 10px;
@@ -238,19 +241,19 @@
 <section class="section" id="cta">
     <h2>Request Services</h2>
     <form class="cta-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
-        <label for="Full name">Full name <span>(required)</span></label>
+        <label for="full_name">Full name <span>(required)</span></label>
         <input type="text" name="first_name" placeholder="First Name" required>
         <input type="text" name="last_name" placeholder="Last Name" required>
         <label for="email">Email <span>(required)</span></label>
         <input type="email" name="email" placeholder="Email Address" required>
+        <div class="form-checkbox">
+            <input type="checkbox" name="signup" id="signup">
+            <label for="signup">Sign up for news and updates</label>
+        </div>
         <label for="subject">Subject <span>(required)</span></label>
         <input type="text" name="subject" placeholder="Subject" required>
         <label for="description">Message <span>(required)</span></label>
         <textarea name="description" rows="5" placeholder="Description" required></textarea>
-        <label for="signup">Sign up for news and updates</label>
-        <div class="form-checkbox">
-            <input type="checkbox" name="signup" id="signup">
-        </div>
         <button type="submit">Submit</button>
     </form>
 </section>

@@ -148,6 +148,13 @@
         .cta-form input, .cta-form textarea { width: 100%; padding: 10px; margin: 5px 0; }
         .cta-form button { background: #1470AF; color: white; padding: 10px 20px; border: none; cursor: pointer; }
         .cta-form button:hover { background: #105a8d; }
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .form-checkbox input {
+            margin-right: 10px;
+        }
         .testimonials, .logos { display: flex; flex-wrap: wrap; justify-content: space-around; }
         .testimonial, .logo { margin: 20px; }
         footer { background: #333; color: white; text-align: center; padding: 10px 0; }
@@ -193,13 +200,19 @@
 <section class="section" id="cta">
     <h2>Request Services</h2>
     <form class="cta-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="description" rows="5" placeholder="Description" required></textarea>
+        <div class="form-checkbox">
+            <input type="checkbox" name="signup" id="signup">
+            <label for="signup">Sign up for news and updates</label>
+        </div>
         <button type="submit">Submit</button>
     </form>
 </section>
-    
+
 <section class="section" id="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonials">

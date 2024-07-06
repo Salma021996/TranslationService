@@ -34,7 +34,7 @@
         .header-middle {
             display: flex;
             align-items: center;
-            margin-right: auto;
+            margin-right: 20px; /* Adjusted margin to align closer to the CTA button */
         }
         .header-middle nav {
             display: flex;
@@ -47,7 +47,7 @@
         .header-right a {
             color: white;
             margin-right: 20px;
-            padding: 7px 15px; /* Smaller button */
+            padding: 5px 10px; /* Smaller button */
             background: #1470AF;
             text-decoration: none;
             border-radius: 5px;
@@ -74,14 +74,19 @@
             background: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
             z-index: 1;
         }
-        .hero h1, .hero p, .hero a {
+        .hero h1 {
+            font-size: 36px; /* Larger font size */
+            position: relative;
+            z-index: 2;
+        }
+        .hero p, .hero a {
             position: relative;
             z-index: 2;
         }
         .hero a {
             display: inline-block;
             margin-top: 20px;
-            padding: 7px 15px; /* Smaller button */
+            padding: 10px 25px; /* Bigger button */
             background: #1470AF;
             color: white;
             text-decoration: none;
@@ -123,7 +128,7 @@
 </header>
 
 <section class="hero" id="hero">
-    <h1>Welcome to Translation Services</h1>
+    <h1>Welcome to OTB Translation Services</h1>
     <p>Providing top-notch translation services for all your needs.</p>
     <a href="#cta">Request</a>
 </section>

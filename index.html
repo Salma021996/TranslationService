@@ -20,13 +20,15 @@
         }
         .header-left {
             margin-left: 20px;
+            display: flex;
+            align-items: center;
         }
         .header-left h1 {
             margin: 0;
             font-size: 24px;
         }
         .header-left p {
-            margin: 0;
+            margin: 0 0 0 10px;
             font-size: 12px;
         }
         .header-middle nav {
@@ -41,13 +43,13 @@
             color: white;
             margin-right: 20px;
             padding: 10px 20px;
-            background: #f39c12;
+            background: #1470AF;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
         }
         .header-right a:hover {
-            background: #e67e22;
+            background: #105a8d;
         }
         .hero { 
             position: relative; 
@@ -64,7 +66,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Adjust the transparency here */
+            background: rgba(0, 0, 0, 0.7); /* Adjust the transparency here */
             z-index: 1;
         }
         .hero h1, .hero p, .hero a {
@@ -75,21 +77,22 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background: #f39c12;
+            background: #1470AF;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
         }
         .hero a:hover {
-            background: #e67e22;
+            background: #105a8d;
         }
         .section { padding: 50px 20px; }
         .section:nth-child(odd) { background-color: white; }
         .section:nth-child(even) { background-color: #f0f0f0; }
         .cta-form { max-width: 600px; margin: 0 auto; }
         .cta-form input, .cta-form textarea { width: 100%; padding: 10px; margin: 5px 0; }
-        .cta-form button { background: #333; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .cta-form button { background: #1470AF; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .cta-form button:hover { background: #105a8d; }
         .testimonials, .logos { display: flex; flex-wrap: wrap; justify-content: space-around; }
         .testimonial, .logo { margin: 20px; }
         footer { background: #333; color: white; text-align: center; padding: 10px 0; }
@@ -107,7 +110,6 @@
             <a href="#about">About Me</a>
             <a href="#cta">Request Services</a>
             <a href="#testimonials">Testimonials</a>
-            <a href="#logos">Companies</a>
         </nav>
     </div>
     <div class="header-right">
@@ -144,18 +146,6 @@
         </div>
         <div class="testimonial">
             <p>"Fast and accurate translations." - Client B</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="logos">
-    <h2>Companies I've Worked With</h2>
-    <div class="logos">
-        <div class="logo">
-            <img src="logo1.png" alt="Company 1" width="100">
-        </div>
-        <div class="logo">
-            <img src="logo2.png" alt="Company 2" width="100">
         </div>
     </div>
 </section>

@@ -199,8 +199,20 @@
         .form-checkbox input {
             margin-right: 10px;
         }
-        .testimonials, .logos { display: flex; flex-wrap: wrap; justify-content: space-around; }
-        .testimonial, .logo { margin: 20px; }
+        .testimonials, .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .testimonial, .logo {
+            flex: 0 0 45%; /* Adjust this value to fit your layout */
+            margin: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         footer { background: #333; color: white; text-align: center; padding: 10px 0; }
     </style>
 </head>

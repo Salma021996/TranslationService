@@ -126,6 +126,23 @@
         .section { padding: 50px 20px; }
         .section:nth-child(odd) { background-color: white; }
         .section:nth-child(even) { background-color: #f0f0f0; }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
         .cta-form { max-width: 600px; margin: 0 auto; }
         .cta-form input, .cta-form textarea { width: 100%; padding: 10px; margin: 5px 0; }
         .cta-form button { background: #1470AF; color: white; padding: 10px 20px; border: none; cursor: pointer; }
@@ -162,9 +179,14 @@
     </div>
 </section>
 
-<section class="section" id="about">
-    <h2>About</h2>
-    <p>With years of experience in translation, I offer professional services to help you bridge language barriers.</p>
+<section class="section about" id="about">
+    <div class="about-text">
+        <h2>About</h2>
+        <p>With years of experience in translation, I offer professional services to help you bridge language barriers.</p>
+    </div>
+    <div class="about-image">
+        <img src="https://via.placeholder.com/400" alt="About Image">
+    </div>
 </section>
 
 <section class="section" id="cta">

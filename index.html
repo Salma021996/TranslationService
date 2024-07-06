@@ -124,11 +124,12 @@
             background: #105a8d;
         }
         .section { padding: 50px 20px; }
+        .section:nth-child(odd) { background-color: white; }
+        .section:nth-child(even) { background-color: #f0f0f0; }
         .about {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #f0f0f0; /* Slight grey background */
         }
         .about-text {
             flex: 1;
@@ -146,7 +147,7 @@
         .cta-form {
             max-width: 600px;
             margin: 0 auto;
-            background-color: white; /* White background */
+            background-color: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -198,17 +199,16 @@
         .form-checkbox input {
             margin-right: 10px;
         }
-        .testimonials {
+        .testimonials, .logos {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             text-align: center;
-            background-color: #f0f0f0; /* Slight grey background */
         }
         .testimonial {
             flex: 0 0 45%; /* Adjust this value to fit your layout */
             margin: 20px;
-            background: #f0f0f0; /* Slight grey background */
+            background: #fff;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -225,20 +225,12 @@
             width: 5cm; /* Make the logo smaller */
             height: 5cm; /* Make the logo smaller */
         }
-        .logos {
-            background-color: white; /* White background */
-        }
         .logos img {
             width: 120px; /* Make the logo slightly larger */
             height: auto;
             margin: 0; /* Align the logo to the left */
         }
-        footer { 
-            background: #1470AF; /* Same blue as the CTA buttons */
-            color: white; 
-            text-align: center; 
-            padding: 10px 0; 
-        }
+        footer { background: #333; color: white; text-align: center; padding: 10px 0; }
     </style>
 </head>
 <body>

@@ -272,24 +272,33 @@
 
 <section class="section" id="cta">
     <h2>Request Services</h2>
-    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/success">
-    <input type="hidden" name="form-name" value="contact">
-    <p style="display:none;">
-        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-    </p>
-    <label for="full_name">Full name <span>(required)</span></label>
-    <input type="text" name="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" placeholder="Last Name" required>
-    <label for="email">Email <span>(required)</span></label>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <label for="subject">Subject <span>(required)</span></label>
-    <input type="text" name="subject" placeholder="Subject" required>
-    <label for="description">Message <span>(required)</span></label>
-    <textarea name="description" rows="5" placeholder="Description" required></textarea>
-    <button type="submit">Submit</button>
-</form>
+    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/success" class="cta-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;">
+            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        <div class="form-group">
+            <label for="first_name">First name <span>(required)</span></label>
+            <label for="last_name">Last name <span>(required)</span></label>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span>(required)</span></label>
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject <span>(required)</span></label>
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Message <span>(required)</span></label>
+            <textarea name="description" rows="5" placeholder="Description" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Submit</button>
+    </form>
 </section>
-
+    
 <section class="section" id="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonials">

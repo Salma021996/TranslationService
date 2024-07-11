@@ -280,6 +280,47 @@
                 flex: 0 0 100%;
             }
         }
+
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -290,7 +331,12 @@
         <p>OFFICIUM TRANSLATIONIS BARCELONA</p>
     </div>
     <div class="header-middle">
-        <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav-links" id="navLinks">
             <a href="#about">About</a>
             <a href="#cta">Request Services</a>
             <a href="#testimonials">Testimonials</a>
@@ -383,6 +429,15 @@
 </footer>
 
 <script>
+    function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.style.display === "block") {
+            navLinks.style.display = "none";
+        } else {
+            navLinks.style.display = "block";
+        }
+    }
+
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 

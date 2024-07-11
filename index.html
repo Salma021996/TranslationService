@@ -369,12 +369,22 @@
     </div>
 </section>
 
+<style>
+    footer {
+        background-color: #105a8d;
+        color: white; /* Optional: Change the text color to ensure readability */
+        padding: 20px; /* Optional: Add some padding for better spacing */
+        text-align: center; /* Optional: Center the text */
+    }
+</style>
+
 <footer>
-    <p>Follow me on:</p>
-    <a href="https://www.facebook.com">Facebook</a> |
-    <a href="https://www.twitter.com">Twitter</a> |
-    <a href="https://www.linkedin.com">LinkedIn</a>
+    <p>&copy; <span id="year"></span> OFFICIUM TRANSLATIONIS BARCELONA</p>
 </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

@@ -281,45 +281,31 @@
             }
         }
 
-        /* Hamburger menu styles */
-        .hamburger {
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
             display: none;
-            flex-direction: column;
-            cursor: pointer;
-            margin-right: 20px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-        .nav-links {
-            display: flex;
-        }
-        .nav-links a {
+        .dropdown-content a {
             color: white;
+            padding: 12px 16px;
             text-decoration: none;
-            padding: 8px;
+            display: block;
+            text-align: left;
         }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                position: absolute;
-                top: 60px;
-                left: 0;
-            }
-            .nav-links a {
-                padding: 15px;
-                text-align: center;
-            }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
     </style>
 </head>
@@ -331,16 +317,14 @@
         <p>OFFICIUM TRANSLATIONIS BARCELONA</p>
     </div>
     <div class="header-middle">
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#cta">Request Services</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
         </div>
-        <nav class="nav-links" id="navLinks">
-            <a href="#about">About</a>
-            <a href="#cta">Request Services</a>
-            <a href="#testimonials">Testimonials</a>
-        </nav>
     </div>
     <div class="header-right">
         <a href="#cta">Request</a>
@@ -429,15 +413,6 @@
 </footer>
 
 <script>
-    function toggleMenu() {
-        var navLinks = document.getElementById("navLinks");
-        if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-        } else {
-            navLinks.style.display = "block";
-        }
-    }
-
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 

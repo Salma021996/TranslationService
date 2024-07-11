@@ -280,33 +280,6 @@
                 flex: 0 0 100%;
             }
         }
-
-        /* Dropdown menu styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -317,14 +290,11 @@
         <p>OFFICIUM TRANSLATIONIS BARCELONA</p>
     </div>
     <div class="header-middle">
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#cta">Request Services</a>
-                <a href="#testimonials">Testimonials</a>
-            </div>
-        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#cta">Request Services</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
     </div>
     <div class="header-right">
         <a href="#cta">Request</a>

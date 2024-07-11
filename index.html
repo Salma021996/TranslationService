@@ -245,62 +245,25 @@
             .header-left, .header-middle, .header-right {
                 margin: 10px 0;
             }
+            .header-middle {
+                width: 100%;
+            }
             .header-middle nav {
+                display: none;
                 flex-direction: column;
                 align-items: flex-start;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
             }
             .header-middle nav a {
                 margin: 5px 0;
-            }
-            .hero {
-                padding: 60px 20px;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
-            .about {
-                flex-direction: column;
-            }
-            .about-text, .about-image {
-                width: 100%;
-                padding: 0;
-            }
-            .cta-form {
-                width: 100%;
                 padding: 10px;
-            }
-            .form-group.half-width {
                 width: 100%;
-                display: block;
-            }
-            .form-group.half-width input {
-                width: 100%;
-            }
-            .testimonial {
-                flex: 0 0 100%;
-            }
-
-            .dropdown {
-                display: block;
-                position: relative;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.9);
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-            .dropdown-content a {
-                color: white;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
                 text-align: left;
+                border-bottom: 1px solid #575757;
             }
-            .dropdown-content a:hover {
-                background-color: #575757;
+            .header-middle.show-nav nav {
+                display: flex;
             }
             .dropdown-btn {
                 background: none;
@@ -308,9 +271,13 @@
                 color: white;
                 font-size: 16px;
                 cursor: pointer;
+                margin-left: 20px;
             }
-            .dropdown:hover .dropdown-content {
-                display: block;
+        }
+
+        @media (min-width: 769px) {
+            .dropdown-btn {
+                display: none;
             }
         }
     </style>
@@ -323,19 +290,12 @@
         <p>OFFICIUM TRANSLATIONIS BARCELONA</p>
     </div>
     <div class="header-middle">
+        <button class="dropdown-btn" onclick="toggleMenu()">Menu</button>
         <nav>
             <a href="#about">About</a>
             <a href="#cta">Request Services</a>
             <a href="#testimonials">Testimonials</a>
         </nav>
-        <div class="dropdown">
-            <button class="dropdown-btn">Menu</button>
-            <div class="dropdown-content">
-                <a href="#about">About</a>
-                <a href="#cta">Request Services</a>
-                <a href="#testimonials">Testimonials</a>
-            </div>
-        </div>
     </div>
     <div class="header-right">
         <a href="#cta">Request</a>
@@ -426,24 +386,20 @@
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Dropdown menu toggle
-    document.addEventListener("DOMContentLoaded", function() {
-        var dropdown = document.querySelector(".dropdown-btn");
-        var dropdownContent = document.querySelector(".dropdown-content");
+    function toggleMenu() {
+        var headerMiddle = document.querySelector(".header-middle");
+        headerMiddle.classList.toggle("show-nav");
+    }
 
-        dropdown.addEventListener("click", function() {
-            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-        });
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-btn')) {
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-btn')) {
+            var headerMiddle = document.querySelector(".header-middle");
+            if (headerMiddle.classList.contains('show-nav')) {
+                headerMiddle.classList.remove('show-nav');
             }
         }
-    });
+    }
 </script>
 
 </body>
